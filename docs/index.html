@@ -2,85 +2,87 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>p4kidsparty.pl - Dmuchane Zamki dla Dzieci</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>p4kidsparty - Dmuchane Zamki</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Dmuchane Zamki i Atrakcje dla Dzieci</h1>
-      <p>Imprezy rodzinne, pikniki i eventy z radością!</p>
-      <a href="#kontakt" class="btn-primary">Zarezerwuj teraz</a>
+  <!-- Nawigacja -->
+  <header class="topbar">
+    <div class="container">
+      <h1>p4kidsparty</h1>
+      <nav>
+        <ul>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
-  <!-- Oferta -->
-  <section class="oferta" id="oferta">
-    <h2>Nasza Oferta</h2>
-    <ul>
-      <li>🎉 Różne modele dmuchanych zamków</li>
-      <li>🚚 Dowóz, montaż i demontaż</li>
-      <li>🎁 Dodatkowe akcesoria do zabawy</li>
-      <li>✅ Certyfikowane bezpieczeństwo</li>
-    </ul>
+  <!-- Hero -->
+  <section class="hero" style="background-image: url('images/hero.jpg')">
+    <div class="overlay">
+      <h2>Najlepsze dmuchane zamki dla Twojej imprezy!</h2>
+      <a href="#kontakt" class="cta">Zarezerwuj teraz</a>
+    </div>
   </section>
 
-  <!-- Dlaczego my -->
-  <section class="dlaczego">
-    <h2>Dlaczego warto wybrać p4kidsparty?</h2>
-    <div class="features">
-      <div class="feature">
-        <h3>Bezpieczeństwo</h3>
-        <p>Sprzęt z atestami i zawsze pod nadzorem.</p>
+  <!-- Oferta -->
+  <section id="oferta" class="section">
+    <h2>Nasze usługi</h2>
+    <div class="services">
+      <div class="card">
+        <img src="images/zamek1.jpg" alt="Zamek 1" />
+        <h3>Wynajem dmuchanych zamków</h3>
+        <p>Kolorowe atrakcje z dostawą i montażem!</p>
       </div>
-      <div class="feature">
-        <h3>Pełna Obsługa</h3>
-        <p>Dowieziemy, zainstalujemy i odbierzemy wszystko za Ciebie.</p>
-      </div>
-      <div class="feature">
-        <h3>Zadowolenie dzieci</h3>
-        <p>Uśmiech i radość najmłodszych gwarantowana!</p>
+      <div class="card">
+        <img src="images/zamek2.jpg" alt="Zamek 2" />
+        <h3>Przyjęcia tematyczne</h3>
+        <p>Balony, animacje, konkursy – zabawa gwarantowana.</p>
       </div>
     </div>
   </section>
 
-  <!-- Blog -->
-  <section class="blog" id="blog">
-    <h2>Blog – Inspiracje i Relacje</h2>
-    <div class="blog-posts">
-      <article class="post">
-        <h3>Urodziny Jasia – zamek i wata cukrowa!</h3>
-        <p>Relacja z kolorowej imprezy pod Warszawą – dzieci były zachwycone!</p>
-        <a href="#">Czytaj więcej</a>
-      </article>
-      <article class="post">
-        <h3>Piknik firmowy z atrakcjami</h3>
-        <p>Jak dmuchańce odmieniły integrację firmową – idealne dla całych rodzin.</p>
-        <a href="#">Czytaj więcej</a>
-      </article>
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2>Często zadawane pytania</h2>
+    <div class="accordion">
+      <details open>
+        <summary>Jakie są godziny działania?</summary>
+        <p>Działamy codziennie od 9:00 do 18:00.</p>
+      </details>
+      <details>
+        <summary>Czy dostosowujecie ofertę indywidualnie?</summary>
+        <p>Oczywiście! Skontaktuj się z nami i opowiedz o swoich potrzebach.</p>
+      </details>
+      <details>
+        <summary>Jak mogę zarezerwować?</summary>
+        <p>Skorzystaj z formularza kontaktowego lub zadzwoń.</p>
+      </details>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section class="kontakt" id="kontakt">
-    <h2>Skontaktuj się z nami</h2>
-    <p>📞 Tel: <a href="tel:+48663918132">663 918 132</a></p>
-    <p>📧 Email: <a href="mailto:eduzakup@gmail.com">eduzakup@gmail.com</a></p>
+  <section id="kontakt" class="section">
+    <h2>Kontakt</h2>
+    <p><strong>Telefon:</strong> <a href="tel:+48663918132">663 918 132</a></p>
+    <p><strong>Email:</strong> <a href="mailto:eduzakup@gmail.com">eduzakup@gmail.com</a></p>
 
-    <form action="mailto:eduzakup@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Twoje imię" required>
-      <input type="email" name="email" placeholder="Twój email" required>
-      <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+    <form>
+      <input type="text" placeholder="Twoje imię" required />
+      <input type="email" placeholder="Twój email" required />
+      <textarea rows="5" placeholder="Wiadomość" required></textarea>
       <button type="submit">Wyślij wiadomość</button>
     </form>
   </section>
 
   <!-- Stopka -->
   <footer>
-    <p>&copy; 2025 p4kidsparty.pl | Wszelkie prawa zastrzeżone</p>
+    <p>&copy; 2025 p4kidsparty | Projekt inspirowany Webador</p>
   </footer>
 
 </body>
