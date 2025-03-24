@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset i podstawy */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #fffefc;
+  background: #fff;
   color: #333;
   line-height: 1.6;
 }
@@ -14,133 +14,153 @@ a {
   text-decoration: none;
   color: #ff4081;
 }
-ul {
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Topbar */
+.topbar {
+  background: #ff4081;
+  color: white;
+  padding: 15px 0;
+}
+.topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar h1 {
+  font-size: 1.8rem;
+}
+nav ul {
   list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  color: white;
+  font-weight: bold;
 }
 
 /* Hero */
 .hero {
-  background: url('https://cdn.pixabay.com/photo/2017/08/10/03/26/bouncy-castle-2617901_960_720.jpg') center/cover no-repeat;
   height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px 20px;
+  border-radius: 10px;
   color: white;
 }
-.hero-content {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 40px;
-  border-radius: 10px;
-}
-.hero h1 {
+.hero h2 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.hero p {
-  font-size: 1.2rem;
   margin-bottom: 20px;
 }
-.btn-primary {
-  background-color: #ff4081;
+.cta {
+  background: #ff4081;
   color: white;
   padding: 12px 25px;
   border-radius: 5px;
   font-weight: bold;
+  transition: background 0.3s ease;
+}
+.cta:hover {
+  background: #e73370;
 }
 
 /* Sekcje */
-section {
+.section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
-}
-section h2 {
   text-align: center;
-  margin-bottom: 40px;
+}
+.section h2 {
   font-size: 2rem;
+  margin-bottom: 40px;
 }
 
-/* Oferta */
-.oferta ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 0 20px;
-  font-size: 1.1rem;
-}
-.oferta li {
-  background-color: #ffe4ed;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-/* Dlaczego */
-.features {
+/* Usługi */
+.services {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
-.feature {
-  background-color: #f7f7f7;
-  border-left: 5px solid #ff4081;
+.card {
+  background: #fef4f8;
+  border-radius: 10px;
   padding: 20px;
-  flex: 1 1 300px;
-  border-radius: 8px;
+  width: 300px;
 }
-
-/* Blog */
-.blog-posts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
-.post {
-  background-color: #fff4f8;
-  padding: 20px;
-  flex: 1 1 45%;
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-.post:hover {
-  background-color: #ffe2ed;
-}
-.post h3 {
+.card h3 {
   margin-bottom: 10px;
+  color: #ff4081;
 }
 
-/* Kontakt */
-.kontakt form {
+/* FAQ */
+.accordion {
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+.accordion details {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+.accordion summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Formularz kontaktowy */
+form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.kontakt input,
-.kontakt textarea {
-  padding: 10px;
+input, textarea {
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  width: 100%;
 }
-.kontakt button {
+button {
   background-color: #ff4081;
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
   cursor: pointer;
   border-radius: 6px;
   font-weight: bold;
 }
-.kontakt button:hover {
+button:hover {
   background-color: #e73370;
 }
 
 /* Stopka */
 footer {
-  text-align: center;
-  background-color: #333;
+  background: #333;
   color: white;
+  text-align: center;
   padding: 20px;
 }
