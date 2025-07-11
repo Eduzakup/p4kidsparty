@@ -3,152 +3,2255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>P4KidsParty - Dmuchane Zamki</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
+    <title>P4Kids Party - Wynajem Dmuchanych Zamków i Atrakcji dla Dzieci | Urodziny, Eventy, Imprezy</title>
+    <meta name="description" content="Wynajem dmuchanych zamków, zjeżdżalni i atrakcji dla dzieci. Organizujemy niezapomniane urodziny i imprezy dziecięce. Bezpieczne, kolorowe atrakcje na każdą okazję. Warszawa i okolice.">
+    <meta name="keywords" content="wynajem dmuchanych zamków, dmuchane zamki dla dzieci, wynajem atrakcji dla dzieci, urodziny dla dzieci, imprezy dziecięce, zjeżdżalnie dmuchane, trampoliny, Warszawa, atrakcje na urodziny">
+    <meta name="author" content="P4Kids Party">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://eduzakup.github.io/p4kidsparty/">
+    <meta property="og:title" content="P4Kids Party - Wynajem Dmuchanych Zamków dla Dzieci">
+    <meta property="og:description" content="Niezapomniane imprezy dziecięce z dmuchanymi zamkami i atrakcjami. Bezpieczne, kolorowe, pełne radości!">
+    <meta property="og:image" content="https://eduzakup.github.io/p4kidsparty/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://eduzakup.github.io/p4kidsparty/">
+    <meta property="twitter:title" content="P4Kids Party - Wynajem Dmuchanych Zamków dla Dzieci">
+    <meta property="twitter:description" content="Niezapomniane imprezy dziecięce z dmuchanymi zamkami i atrakcjami. Bezpieczne, kolorowe, pełne radości!">
+    <meta property="twitter:image" content="https://eduzakup.github.io/p4kidsparty/images/og-image.jpg">
+
+    <link rel="canonical" href="https://eduzakup.github.io/p4kidsparty/">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#FF6B35">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=1920&h=1080&fit=crop" as="image">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "P4Kids Party",
+        "description": "Wynajem dmuchanych zamków i atrakcji dla dzieci",
+        "url": "https://eduzakup.github.io/p4kidsparty/",
+        "telephone": "+48123456789",
+        "email": "kontakt@p4kidsparty.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warszawa",
+            "addressCountry": "PL"
+        },
+        "serviceArea": {
+            "@type": "Place",
+            "name": "Warszawa i okolice"
+        },
+        "services": [
+            "Wynajem dmuchanych zamków",
+            "Wynajem zjeżdżalni dmuchanych",
+            "Organizacja imprez dziecięcych",
+            "Wynajem trampolinów",
+            "Atrakcje na urodziny dzieci"
+        ],
+        "sameAs": [
+            "https://facebook.com/p4kidsparty",
+            "https://instagram.com/p4kidsparty"
+        ]
+    }
+    </script>
+
     <style>
-        body {
-            font-family: 'Fredoka', sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: #fdfdfd;
-            color: #333;
+            box-sizing: border-box;
         }
-        header {
-            background: #ffd400;
-            padding: 1rem 2rem;
+
+        :root {
+            /* Dziecięca, ale profesjonalna paleta kolorów */
+            --primary-color: #FF6B35; /* Energetyczna pomarańcz */
+            --primary-light: #FF8A5B; /* Jaśniejsza pomarańcz */
+            --secondary-color: #4ECDC4; /* Przyjemny turkus */
+            --secondary-light: #7FDBDA; /* Jaśniejszy turkus */
+            --accent-color: #FFE66D; /* Słoneczny żółty */
+            --accent-purple: #A8E6CF; /* Miętowy zielony */
+            --white: #FFFFFF;
+            --light-bg: #F8F9FA; /* Bardzo jasny szary */
+            --gray-100: #F1F3F4;
+            --gray-200: #E8EAED;
+            --gray-300: #DADCE0;
+            --gray-600: #5F6368;
+            --gray-800: #3C4043;
+            --text-dark: #202124;
+            --text-light: #5F6368;
+            
+            /* Gradienty */
+            --gradient-primary: linear-gradient(135deg, #FF6B35, #FF8A5B);
+            --gradient-secondary: linear-gradient(135deg, #4ECDC4, #7FDBDA);
+            --gradient-fun: linear-gradient(135deg, #FFE66D, #FF8A5B, #4ECDC4);
+            
+            /* Cienie */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+            --shadow-colored: 0 8px 32px rgba(255, 107, 53, 0.2);
+        }
+
+        /* System fonts dla wydajności */
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-display: swap;
+        }
+
+        /* Optymalizowane style globalne */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--gray-100);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        ::selection {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Szybki loader */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.5s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: var(--gradient-fun);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1.5rem;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .loader-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--gray-200);
+            border-top: 3px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsywna nawigacja */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+            padding: 0.5rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0 1rem;
         }
-        nav a {
-            margin: 0 1rem;
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-decoration: none;
-            color: #000;
-            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
-        .btn {
-            background: #ff5c5c;
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
+
+        .logo::before {
+            content: '🏰';
+            font-size: 1.5rem;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+            font-size: 0.95rem;
         }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-cta {
+            background: var(--gradient-primary);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            color: var(--white) !important;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+            font-size: 0.9rem;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-colored);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* Hero Section */
         .hero {
-            background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 5rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 5rem 1rem 2rem;
+            background: 
+                linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(78, 205, 196, 0.1)),
+                url('https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=1920&h=1080&fit=crop') center/cover;
+            position: relative;
+            overflow: hidden;
         }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            animation: slideInLeft 1s ease-out;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.5rem 1.2rem;
+            border-radius: 25px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-sm);
+        }
+
         .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.1;
+        }
+
+        .hero h1 .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-colored);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: var(--white);
+        }
+
+        .hero-image {
+            position: relative;
+            animation: slideInRight 1s ease-out;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Floating decorations */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: var(--gradient-secondary);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 3rem 1rem;
+            background: var(--light-bg);
+        }
+
+        .stats-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem 1rem;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: block;
         }
-        .section {
-            padding: 3rem 2rem;
+
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        /* Section Styles */
+        section {
+            padding: clamp(3rem, 8vw, 6rem) 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
+            margin-bottom: clamp(3rem, 6vw, 5rem);
         }
-        .offers, .gallery {
-            display: flex;
-            flex-wrap: wrap;
+
+        .section-badge {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .section-title .highlight {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Products Section */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            justify-content: center;
+            margin-top: 3rem;
         }
-        .card {
-            background: white;
-            padding: 1rem;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.05);
-            width: 250px;
+
+        .product-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            height: 100%;
         }
-        .cta {
-            background: #90cdf4;
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-content {
             padding: 2rem;
-            text-align: center;
         }
-        footer {
-            background: #ffd400;
-            text-align: center;
-            padding: 1rem;
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-features li {
+            color: var(--text-light);
+            padding: 0.2rem 0;
+            padding-left: 1.5rem;
+            position: relative;
             font-size: 0.9rem;
         }
-        @media (max-width: 768px) {
-            nav { flex-direction: column; }
-            .offers, .gallery { flex-direction: column; align-items: center; }
+
+        .product-features li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        .product-price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .price-info {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .btn-small {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.9rem;
+            border-radius: 20px;
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--light-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-secondary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .about-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Gallery Section */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            loading: lazy;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--white);
+            padding: 1.5rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-description {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Testimonials */
+        .testimonials-section {
+            background: var(--light-bg);
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .testimonial-info h4 {
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-info span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--gray-100);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--light-bg);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.9rem;
+            border: 2px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-colored);
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .info-text h3 {
+            color: var(--text-dark);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-text p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .info-text a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .info-text a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-colored);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 1rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p,
+        .footer-section ul {
+            color: var(--gray-300);
+            line-height: 1.6;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--gray-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--gray-600);
+            color: var(--gray-300);
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .nav-container {
+                padding: 0 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                padding: 2rem 0;
+                gap: 1rem;
+                box-shadow: var(--shadow-md);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                height: 300px;
+            }
+
+            .about-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .floating-shapes {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                font-size: 14px;
+            }
+
+            .hero {
+                padding: 3rem 0.5rem 1rem;
+            }
+
+            section {
+                padding: 2rem 0.5rem;
+            }
+
+            .products-grid,
+            .testimonials-container,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animacje optymalizowane */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.6s ease;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Performance optimizations */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles */
+        .nav-link:focus,
+        .btn:focus,
+        .submit-btn:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div><strong>P4KidsParty</strong></div>
-        <nav>
-            <a href="#oferta">Oferta</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#opinie">Opinie</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-        <a href="#kontakt" class="btn">Zarezerwuj zamek</a>
-    </header>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-logo">P4Kids Party</div>
+        <div class="loader-spinner"></div>
+    </div>
 
-    <section class="hero">
-        <h1>Wynajem Dmuchanych Zamków dla Dzieci</h1>
-        <p>Zrób z każdej okazji niezapomnianą przygodę!</p>
-        <a href="#oferta" class="btn">Zobacz ofertę</a>
-    </section>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">P4Kids Party</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Start</a></li>
+                <li><a href="#about" class="nav-link">O nas</a></li>
+                <li><a href="#products" class="nav-link">Atrakcje</a></li>
+                <li><a href="#gallery" class="nav-link">Galeria</a></li>
+                <li><a href="#testimonials" class="nav-link">Opinie</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Kontakt</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <section class="section" id="oferta">
-        <h2>Nasza Oferta</h2>
-        <div class="offers">
-            <div class="card">
-                <h3>🎉 Zamek Księżniczki</h3>
-                <p>Idealny na urodziny!</p>
-                <strong>Cena: 300 zł / dzień</strong>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">🎉 Niezapomniane przygody dla dzieci!</div>
+                <h1>Wynajem <span class="highlight">Dmuchanych Zamków</span> i Atrakcji dla Dzieci</h1>
+                <p class="hero-subtitle">Organizujemy magiczne imprezy pełne radości i śmiechu! Bezpieczne, kolorowe dmuchane zamki, zjeżdżalnie i trampoliny, które sprawią, że urodziny Twojego dziecka będą naprawdę wyjątkowe.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <span>🏰</span> Zarezerwuj teraz
+                    </a>
+                    <a href="#products" class="btn btn-secondary">
+                        <span>👀</span> Zobacz atrakcje
+                    </a>
+                </div>
             </div>
-            <div class="card">
-                <h3>🦖 Dino Zamek</h3>
-                <p>Przygoda w prehistorii!</p>
-                <strong>Cena: 320 zł / dzień</strong>
-            </div>
-            <div class="card">
-                <h3>🚀 Skocznia Kosmiczna</h3>
-                <p>Dla małych astronautów!</p>
-                <strong>Cena: 350 zł / dzień</strong>
-            </div>
-            <div class="card">
-                <h3>🌊 Zjeżdżalnia Wodna</h3>
-                <p>Idealna na lato!</p>
-                <strong>Cena: 400 zł / dzień</strong>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=800&h=500&fit=crop" alt="Dzieci bawiące się na dmuchanym zamku" loading="eager">
             </div>
         </div>
     </section>
 
-    <section class="section" id="galeria">
-        <h2>Galeria</h2>
-        <div class="gallery">
-            <img src="https://via.placeholder.com/250x150" alt="Zamek 1">
-            <img src="https://via.placeholder.com/250x150" alt="Zamek 2">
-            <img src="https://via.placeholder.com/250x150" alt="Zamek 3">
+    <!-- Stats Section -->
+    <section class="stats-section fade-in">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-icon">🎉</div>
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Szczęśliwych dzieci</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">🏰</div>
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Różnych atrakcji</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">⭐</div>
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Zadowolonych rodziców</span>
+            </div>
+            <div class="stat-item">
+                <div class="stat-icon">📍</div>
+                <span class="stat-number">15</span>
+                <span class="stat-label">Miast obsługujemy</span>
+            </div>
         </div>
     </section>
 
-    <section class="section" id="opinie">
-        <h2>Opinie Klientów</h2>
-        <p>"Super atrakcja! Dzieci były zachwycone!" – Anna</p>
-        <p>"Wszystko na czas, bardzo miła obsługa!" – Marek</p>
+    <!-- About Section -->
+    <section id="about" class="about-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">O NAS</span>
+                <h2 class="section-title">Dlaczego <span class="highlight">P4Kids Party</span>?</h2>
+                <p class="section-subtitle">Jesteśmy specjalistami w organizacji niezapomnianych imprez dziecięcych. Nasze dmuchane zamki i atrakcje to gwarancja radości i bezpieczeństwa.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nasza Misja</h3>
+                    <p>Od ponad 5 lat tworzymy magiczne chwile dla dzieci w całej Polsce. Nasza pasja to uśmiechy na dziecięcych twarzach i niezapomniane wspomnienia, które zostają na całe życie.</p>
+                    <p>Oferujemy tylko najwyższej jakości, bezpieczne i regularnie serwisowane atrakcje. Każdy dmuchany zamek przechodzi dokładną kontrolę przed każdym wynajmem.</p>
+                    <p>Nasz zespół składa się z doświadczonych animatorów i specjalistów od imprez dziecięcych, którzy zadbają o każdy szczegół Waszego wydarzenia.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-icon">🛡️</div>
+                            <span>Bezpieczeństwo przede wszystkim</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">✨</div>
+                            <span>Najwyższa jakość atrakcji</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">🚚</div>
+                            <span>Darmowa dostawa i montaż</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-icon">💖</div>
+                            <span>Indywidualne podejście</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Dzieci bawiące się bezpiecznie na atrakcjach" loading="lazy">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="cta" id="kontakt">
-        <h2>Gotowi na super zabawę?</h2>
-        <p>Skontaktuj się z nami i zarezerwuj termin!</p>
-        <a href="tel:+48123456789" class="btn">Zadzwoń teraz</a>
+    <!-- Products Section -->
+    <section id="products" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ATRAKCJE</span>
+                <h2 class="section-title">Nasze <span class="highlight">Dmuchane Atrakcje</span></h2>
+                <p class="section-subtitle">Wybierz spośród szerokiej gamy kolorowych i bezpiecznych atrakcji, które sprawią, że impreza Twojego dziecka będzie niezapomniana!</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Dmuchany zamek księżniczki" loading="lazy">
+                        <div class="product-badge">HIT!</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Zamek Księżniczki</h3>
+                        <p class="product-description">Magiczny zamek w kolorach różu i fioletu, idealny dla małych księżniczek. Z wieżyczkami i slajdem!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 4x4x3m</li>
+                            <li>Dla dzieci 3-12 lat</li>
+                            <li>Maks. 8 dzieci jednocześnie</li>
+                            <li>Certyfikat bezpieczeństwa CE</li>
+                            <li>Gratis: mata wejściowa</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">299 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1582845512747-e42001c95638?w=400&h=250&fit=crop" alt="Dmuchana zjeżdżalnia" loading="lazy">
+                        <div class="product-badge">NOWOŚĆ</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Mega Zjeżdżalnia</h3>
+                        <p class="product-description">Ogromna, kolorowa zjeżdżalnia z basenem z piłeczkami na dole. Ekstremalna frajda gwarantowana!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 8x4x5m</li>
+                            <li>Dla dzieci 4-14 lat</li>
+                            <li>Wysokość zjazdu: 4m</li>
+                            <li>Basen z 500 piłeczkami</li>
+                            <li>Dodatkowa strefa wspinaczkowa</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">499 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1511593358241-7eea1f3c84e5?w=400&h=250&fit=crop" alt="Trampolina dmuchana" loading="lazy">
+                        <div class="product-badge">TOP</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Trampolina Gigant</h3>
+                        <p class="product-description">Wielka trampolina z siatkami bezpieczeństwa. Idealna do skoków i zabaw grupowych!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 5x5x2.5m</li>
+                            <li>Dla dzieci 3-16 lat</li>
+                            <li>Siatki bezpieczeństwa 360°</li>
+                            <li>Maks. 10 dzieci jednocześnie</li>
+                            <li>Przeciwpoślizgowa powierzchnia</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">399 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=400&h=250&fit=crop" alt="Tor przeszkód dmuchany" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Tor Przeszkód Ninja</h3>
+                        <p class="product-description">Ekscytujący tor przeszkód z tunelami, ściankami do wspinania i zjeżdżalniami!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 12x3x3m</li>
+                            <li>Dla dzieci 5-15 lat</li>
+                            <li>6 różnych przeszkód</li>
+                            <li>Ścianki wspinaczkowe</li>
+                            <li>Tunele i slalom</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">599 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop" alt="Basen z piłeczkami" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Basen z Piłeczkami</h3>
+                        <p class="product-description">Ogromny dmuchany basen wypełniony tysiącami kolorowych piłeczek. Raj dla najmłodszych!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 4x4x1m</li>
+                            <li>Dla dzieci 1-8 lat</li>
+                            <li>1000 kolorowych piłeczek</li>
+                            <li>Miękkie ścianki</li>
+                            <li>Łatwe wejście/wyjście</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">249 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card scale-in">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=400&h=250&fit=crop" alt="Combo dmuchany plac zabaw" loading="lazy">
+                        <div class="product-badge">PAKIET</div>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Combo Park</h3>
+                        <p class="product-description">Wielka atrakcja łącząca zamek, zjeżdżalnię, trampolinę i tor przeszkód w jednym!</p>
+                        <ul class="product-features">
+                            <li>Wymiary: 10x6x4m</li>
+                            <li>Dla dzieci 3-14 lat</li>
+                            <li>4 strefy zabaw</li>
+                            <li>Maks. 15 dzieci jednocześnie</li>
+                            <li>Kompletne centrum rozrywki</li>
+                        </ul>
+                        <div class="product-price">
+                            <div>
+                                <span class="price">799 zł</span>
+                                <div class="price-info">za dzień</div>
+                            </div>
+                            <a href="#contact" class="btn btn-primary btn-small">Wynajmij</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">GALERIA</span>
+                <h2 class="section-title">Zobacz Nas <span class="highlight">w Akcji</span></h2>
+                <p class="section-subtitle">Sprawdź, jak wyglądają nasze atrakcje na prawdziwych imprezach i zobacz uśmiechy na dziecięcych twarzach!</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=250&fit=crop" alt="Urodziny z dmuchanym zamkiem" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Urodziny Zosi</h4>
+                        <p class="gallery-description">6. urodziny z zamkiem księżniczki</p>
+                    </div>
+                </div>
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a8e?w=400&h=250&fit=crop" alt="Festyn szkolny z atrakcjami" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Festyn Szkolny</h4>
+                        <p class="gallery-description">Dzień Dziecka w SP nr 15</p>
+                    </div>
+                </div>
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?w=400&h=250&fit=crop" alt="Impreza firmowa dla rodzin" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Piknik Firmowy</h4>
+                        <p class="gallery-description">Strefa dziecięca na pikniku rodzinnym</p>
+                    </div>
+                </div>
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1527856263669-12c3a0af2aa6?w=400&h=250&fit=crop" alt="Wielka zjeżdżalnia w akcji" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Mega Zjeżdżalnia</h4>
+                        <p class="gallery-description">Najlepsza atrakcja na każdej imprezie</p>
+                    </div>
+                </div>
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=250&fit=crop" alt="Dzieci w basenie z piłeczkami" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Basen z Piłeczkami</h4>
+                        <p class="gallery-description">Raj dla najmłodszych gości</p>
+                    </div>
+                </div>
+                <div class="gallery-item scale-in">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=250&fit=crop" alt="Combo park w pełnej krasie" loading="lazy">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">Combo Park</h4>
+                        <p class="gallery-description">Kompleksowa strefa zabaw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">OPINIE</span>
+                <h2 class="section-title">Co Mówią <span class="highlight">Zadowoleni Rodzice</span></h2>
+                <p class="section-subtitle">Przeczytaj opinie rodziców, którzy zaufali nam organizację imprezy swoich dzieci</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Anna Kowalska</h4>
+                            <span>Mama 6-letniej Zosi</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Niesamowite! Zamek księżniczki był przebojem urodzin mojej córki. Dzieci bawiły się przez całe popołudnie, a ja mogłam w spokoju przygotować poczęstunek. Obsługa profesjonalna, montaż błyskawiczny. Polecam!"</p>
+                </div>
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Marcin Nowak</h4>
+                            <span>Tata 8-letniego Kubka</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Mega zjeżdżalnia to strzał w dziesiątkę! Mój syn i jego koledzy byli zachwyceni. Bezpieczeństwo na najwyższym poziomie, a radość dzieci bezcenna. Już planujemy następną imprezę z P4Kids Party!"</p>
+                </div>
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">K</div>
+                        <div class="testimonial-info">
+                            <h4>Katarzyna Wiśniewska</h4>
+                            <span>Organizatorka przedszkola</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Współpracujemy z P4Kids Party przy organizacji Dnia Dziecka już trzeci rok z rzędu. Zawsze można na nich polegać - terminowość, jakość sprzętu i przede wszystkim bezpieczeństwo na najwyższym poziomie."</p>
+                </div>
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">P</div>
+                        <div class="testimonial-info">
+                            <h4>Piotr Malinowski</h4>
+                            <span>Papa 4-letniej Julki</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Trampolina Gigant była hitem na pikniku firmowym! Dzieci wszystkich wieku bawiły się świetnie, a rodzice mogli w spokoju porozmawiać. Świetny stosunek jakości do ceny. Zdecydowanie polecamy!"</p>
+                </div>
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Magdalena Król</h4>
+                            <span>Mama bliźniaków</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Combo Park to była najlepsza inwestycja na 5. urodziny moich bliźniaków! Wszystkie dzieci znalazły coś dla siebie - od najmłodszych po starsze. Impreza udana w 100%!"</p>
+                </div>
+                <div class="testimonial-card scale-in">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">T</div>
+                        <div class="testimonial-info">
+                            <h4>Tomasz Adamczyk</h4>
+                            <span>Dziadek 3-letniej Agatki</span>
+                        </div>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Basen z piłeczkami to był strzał w dziesiątkę dla mojej wnuczki i jej malutkich przyjaciół. Bezpieczne, kolorowe i dające mnóstwo radości. Dziękuję za profesjonalną obsługę!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">FAQ</span>
+                <h2 class="section-title">Często Zadawane <span class="highlight">Pytania</span></h2>
+                <p class="section-subtitle">Znajdź odpowiedzi na najczęściej zadawane pytania o wynajem naszych atrakcji</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Jak wcześnie należy zarezerwować atrakcję?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Zalecamy rezerwację co najmniej 2 tygodnie wcześniej, szczególnie w sezonie wiosenno-letnim i przed świętami. W weekendy atrakcje są bardzo popularne, więc im wcześniej tym lepiej. Możliwość rezerwacji mamy już na 3 miesiące do przodu.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Czy atrakcje są bezpieczne dla dzieci?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tak! Wszystkie nasze atrakcje posiadają certyfikaty CE i są regularnie kontrolowane przez uprawnione firmy. Wykonane są z wysokiej jakości materiałów PVC, odpornych na przecięcia. Każda atrakcja ma specjalne siatki bezpieczeństwa i miękkie ścianki.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Ile dzieci może jednocześnie korzystać z atrakcji?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Każda atrakcja ma określoną maksymalną liczbę dzieci, która może z niej korzystać jednocześnie. Na przykład Zamek Księżniczki - maksymalnie 8 dzieci, Trampolina Gigant - 10 dzieci, a Combo Park - 15 dzieci. To gwarantuje bezpieczeństwo i komfort zabawy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Czy cena zawiera dostawę i montaż?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tak! W cenie wynajmu zawarta jest bezpłatna dostawa, montaż i demontaż w promieniu 30 km od Warszawy. Dla większych odległości naliczamy jedynie koszt dojazdu (2 zł/km). Montaż zajmuje około 30-60 minut, w zależności od wielkości atrakcji.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Co się dzieje w przypadku złej pogody?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Nasze atrakcje są odporne na lekki deszcz, ale przy silnym wietrze (powyżej 30 km/h) lub burzy muszą być wyłączone ze względów bezpieczeństwa. W przypadku całkowicie zmytej pogody, oferujemy przełożenie terminu bez dodatkowych kosztów.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Czy rodzice muszą pilnować dzieci na atrakcjach?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tak, zawsze wymagamy obecności dorosłego opiekuna. Nasze atrakcje są bezpieczne, ale dzieci powinny być pod stałym nadzorem rodziców lub opiekunów. Na życzenie możemy zapewnić dodatkowego animatora za dopłatą 150 zł/godzinę.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Jak długo można wynająć atrakcję?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Standardowy wynajem to 8 godzin (od godziny 10:00 do 18:00). Możliwa jest również opcja całodobowa za 50% dopłaty. Krótsze wynajmy (4-6 godzin) są dostępne za 70% ceny standardowej.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Jakie są wymagania dotyczące miejsca?</span>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Potrzebujemy płaskiego terenu o odpowiednich wymiarach (podanych przy każdej atrakcji) plus 1-2 metry wolnego miejsca dookoła. Podłoże może być trawiaste lub betonowe. Konieczny jest dostęp do prądu 230V w odległości do 50 metrów od atrakcji.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section fade-in">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">KONTAKT</span>
+                <h2 class="section-title">Zarezerwuj <span class="highlight">Swoją Imprezę</span></h2>
+                <p class="section-subtitle">Skontaktuj się z nami już dziś i sprawdź dostępność terminu. Odpowiadamy na zapytania w ciągu 2 godzin!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="event-date">Data imprezy</label>
+                                <input type="date" id="event-date" name="event-date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="attraction">Wybrana atrakcja</label>
+                                <select id="attraction" name="attraction" required>
+                                    <option value="">Wybierz atrakcję</option>
+                                    <option value="zamek-ksiezniczki">Zamek Księżniczki - 299 zł</option>
+                                    <option value="mega-zjezdzalnia">Mega Zjeżdżalnia - 499 zł</option>
+                                    <option value="trampolina-gigant">Trampolina Gigant - 399 zł</option>
+                                    <option value="tor-przeszkod">Tor Przeszkód Ninja - 599 zł</option>
+                                    <option value="basen-pileczki">Basen z Piłeczkami - 249 zł</option>
+                                    <option value="combo-park">Combo Park - 799 zł</option>
+                                    <option value="kilka-atrakcji">Kilka atrakcji</option>
+                                    <option value="nie-wiem">Potrzebuję porady</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Liczba dzieci</label>
+                                <input type="number" id="guests" name="guests" placeholder="Około ile dzieci?" min="1" max="50">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Adres imprezy</label>
+                            <input type="text" id="location" name="location" placeholder="Ulica, miasto" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Dodatkowe informacje</label>
+                            <textarea id="message" name="message" placeholder="Rodzaj imprezy, wiek dzieci, specjalne wymagania..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Wyślij zapytanie</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                            <p>Codziennie 8:00 - 20:00</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h3>Email</h3>
+                            <p><a href="mailto:kontakt@p4kidsparty.pl">kontakt@p4kidsparty.pl</a></p>
+                            <p>Odpowiadamy w 2h</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h3>Obszar działania</h3>
+                            <p>Warszawa i 30 km okolicy</p>
+                            <p>Cała Polska na zapytanie</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💳</div>
+                        <div class="info-text">
+                            <h3>Płatność</h3>
+                            <p>Gotówka, przelew, BLIK</p>
+                            <p>Zaliczka 30% przy rezerwacji</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com/p4kidsparty" class="social-link" target="_blank" rel="noopener">📘</a>
+                        <a href="https://instagram.com/p4kidsparty" class="social-link" target="_blank" rel="noopener">📷</a>
+                        <a href="https://youtube.com/p4kidsparty" class="social-link" target="_blank" rel="noopener">📺</a>
+                        <a href="https://tiktok.com/@p4kidsparty" class="social-link" target="_blank" rel="noopener">🎵</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        © 2025 P4KidsParty | kontakt@p4kidsparty.pl | Facebook | Instagram
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>P4Kids Party</h3>
+                <p>Tworzymy niezapomniane imprezy dziecięce od 2019 roku. Nasze dmuchane zamki i atrakcje to gwarancja radości, bezpieczeństwa i niezapomnianych wspomnień.</p>
+                <p style="margin-top: 1.5rem;"><strong>Dane firmy:</strong><br>
+                P4Kids Party Sp. z o.o.<br>
+                NIP: 123-456-78-90<br>
+                ul. Wesoła 123, 00-001 Warszawa</p>
+            </div>
+            <div class="footer-section">
+                <h3>Nasze Atrakcje</h3>
+                <ul>
+                    <li><a href="#products">Dmuchane Zamki</a></li>
+                    <li><a href="#products">Zjeżdżalnie</a></li>
+                    <li><a href="#products">Trampoliny</a></li>
+                    <li><a href="#products">Tory Przeszkód</a></li>
+                    <li><a href="#products">Baseny z Piłeczkami</a></li>
+                    <li><a href="#products">Combo Parki</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Obsługujemy</h3>
+                <ul>
+                    <li>Urodziny dziecięce</li>
+                    <li>Imprezy przedszkolne</li>
+                    <li>Festyny szkolne</li>
+                    <li>Piknigi firmowe</li>
+                    <li>Eventy okolicznościowe</li>
+                    <li>Komunię Świętą</li>
+                    <li>Wesela z dziećmi</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Przydatne Linki</h3>
+                <ul>
+                    <li><a href="#about">O nas</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#testimonials">Opinie</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#">Regulamin</a></li>
+                    <li><a href="#">Polityka Prywatności</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 P4Kids Party. Wszystkie prawa zastrzeżone.</p>
+            <p>Zaprojektowano z ❤️ dla dzieci i rodziców</p>
+        </div>
     </footer>
+
+    <script>
+        // Performance optimized JavaScript
+
+        // Fast loader
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('hidden');
+                initializeAnimations();
+            }, 800);
+        });
+
+        // Optimized navbar scroll
+        let ticking = false;
+        function updateNavbar() {
+            const navbar = document.getElementById('navbar');
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateNavbar);
+                ticking = true;
+            }
+        });
+
+        // Mobile menu
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll animations with Intersection Observer
+        function initializeAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Animate stats
+                        if (entry.target.classList.contains('stat-item')) {
+                            const statNumber = entry.target.querySelector('.stat-number');
+                            const finalValue = statNumber.textContent;
+                            animateValue(statNumber, 0, finalValue, 2000);
+                        }
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in, .scale-in, .stat-item').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Counter animation
+        function animateValue(obj, start, end, duration) {
+            let current = start;
+            const range = parseFloat(end) - start;
+            const increment = range / (duration / 16);
+            const isPercentage = end.includes('%');
+            const isPlus = end.includes('+');
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= parseFloat(end)) {
+                    current = parseFloat(end);
+                    clearInterval(timer);
+                }
+                
+                let display = Math.floor(current);
+                if (isPercentage) display += '%';
+                if (isPlus) display += '+';
+                obj.textContent = display;
+            }, 16);
+        }
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const btn = e.target.querySelector('.submit-btn');
+            const originalText = btn.textContent;
+            
+            // Simple validation
+            const requiredFields = e.target.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    field.style.borderColor = '#e74c3c';
+                    isValid = false;
+                } else {
+                    field.style.borderColor = '';
+                }
+            });
+            
+            if (!isValid) {
+                showNotification('Wypełnij wszystkie wymagane pola!', 'error');
+                return;
+            }
+            
+            btn.textContent = 'Wysyłanie...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.textContent = 'Wysłano! ✓';
+                setTimeout(() => {
+                    e.target.reset();
+                    btn.textContent = originalText;
+                    btn.disabled = false;
+                    showNotification('Dziękuję za zapytanie! Oddzwonimy w ciągu 2 godzin 😊', 'success');
+                }, 1500);
+            }, 1500);
+        });
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const existing = document.querySelector('.notification');
+            if (existing) existing.remove();
+
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 90px;
+                right: 20px;
+                background: ${type === 'error' ? '#e74c3c' : 'var(--gradient-primary)'};
+                color: white;
+                padding: 1rem 1.5rem;
+                border-radius: 25px;
+                font-weight: 600;
+                z-index: 10001;
+                transform: translateX(300px);
+                transition: transform 0.3s ease;
+                box-shadow: var(--shadow-md);
+                max-width: 300px;
+                font-size: 0.9rem;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            setTimeout(() => {
+                notification.style.transform = 'translateX(300px)';
+                setTimeout(() => {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
+            }, 4000);
+        }
+
+        // Active nav link detection
+        let navTicking = false;
+        function updateActiveNav() {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+            navTicking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!navTicking) {
+                requestAnimationFrame(updateActiveNav);
+                navTicking = true;
+            }
+        });
+
+        // Initialize on DOM ready
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set current year
+            const currentYear = new Date().getFullYear();
+            document.querySelector('.footer-bottom p').innerHTML = 
+                document.querySelector('.footer-bottom p').innerHTML.replace('2024', currentYear);
+            
+            // Set date input minimum to today
+            const dateInput = document.getElementById('event-date');
+            if (dateInput) {
+                const today = new Date();
+                const nextWeek = new Date(today.getTime() + 7 * 24 * 60 * 60 * 1000);
+                dateInput.min = today.toISOString().split('T')[0];
+                dateInput.value = nextWeek.toISOString().split('T')[0];
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+                
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+            }
+        });
+
+        // Performance: Debounced resize handler
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                // Handle resize if needed
+            }, 250);
+        });
+    </script>
 </body>
 </html>
