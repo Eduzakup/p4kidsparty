@@ -7,198 +7,241 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+/* Reset & base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffefc;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #ff4081;
+}
+ul {
+  list-style: none;
+}
 
-    body {
-      font-family: 'Fredoka', sans-serif;
-      line-height: 1.6;
-      background: #fef6ff;
-      color: #333;
-    }
+/* Hero */
+.hero {
+  background: url('https://cdn.pixabay.com/photo/2017/08/10/03/26/bouncy-castle-2617901_960_720.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 10px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.btn-primary {
+  background-color: #ff4081;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
-    header {
-      background: linear-gradient(to right, #ff80ab, #ffcc80);
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
+/* Sekcje */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
+/* Oferta */
+.oferta ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+}
+.oferta li {
+  background-color: #ffe4ed;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    header p {
-      font-size: 1.2rem;
-    }
+/* Dlaczego */
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.feature {
+  background-color: #f7f7f7;
+  border-left: 5px solid #ff4081;
+  padding: 20px;
+  flex: 1 1 300px;
+  border-radius: 8px;
+}
 
-    .hero-button {
-      margin-top: 1rem;
-      background: #fff;
-      color: #ff4081;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-weight: bold;
-      border-radius: 25px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
+/* Blog */
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.post {
+  background-color: #fff4f8;
+  padding: 20px;
+  flex: 1 1 45%;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+.post:hover {
+  background-color: #ffe2ed;
+}
+.post h3 {
+  margin-bottom: 10px;
+}
 
-    section {
-      padding: 2rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
+/* Kontakt */
+.kontakt form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.kontakt input,
+.kontakt textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+.kontakt button {
+  background-color: #ff4081;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.kontakt button:hover {
+  background-color: #e73370;
+}
 
-    h2 {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .offer-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .offer-item {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      flex: 1 1 200px;
-      max-width: 300px;
-      text-align: center;
-    }
-
-    .offer-item img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 0.5rem;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .feature {
-      flex: 1 1 150px;
-      text-align: center;
-      font-size: 1.1rem;
-    }
-
-    .contact-form {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      max-width: 500px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .map-container iframe {
-      width: 100%;
-      height: 400px;
-      border: 0;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #ff80ab;
-      color: white;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
+/* Stopka */
+footer {
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
   </style>
 </head>
 <body>
 
-<header data-aos="zoom-in">
-  <h1>P4Kids Party</h1>
-  <p>Wynajem dmuchanych zamków i atrakcji dla dzieci</p>
-  <button class="hero-button">Zarezerwuj teraz</button>
-</header>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>p4kidsparty.pl - Dmuchane Zamki dla Dzieci</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-<section>
-  <h2 data-aos="fade-up">Nasza oferta</h2>
-  <div class="offer-grid">
-    <div class="offer-item" data-aos="fade-up" data-aos-delay="100">
-      <img src="zamek1.jpg" alt="Zamek Księżniczki" />
-      <h3>Zamek Księżniczki</h3>
-      <p>Dla małych królewien – bajkowy klimat i zabawa!</p>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Dmuchane Zamki i Atrakcje dla Dzieci</h1>
+      <p>Imprezy rodzinne, pikniki i eventy z radością!</p>
+      <a href="#kontakt" class="btn-primary">Zarezerwuj teraz</a>
     </div>
-    <div class="offer-item" data-aos="fade-up" data-aos-delay="200">
-      <img src="zamek2.jpg" alt="Piracki Statek" />
-      <h3>Piracki Statek</h3>
-      <p>Idealny dla małych odkrywców i łowców przygód!</p>
+  </header>
+
+  <!-- Oferta -->
+  <section class="oferta" id="oferta">
+    <h2>Nasza Oferta</h2>
+    <ul>
+      <li>🎉 Różne modele dmuchanych zamków</li>
+      <li>🚚 Dowóz, montaż i demontaż</li>
+      <li>🎁 Dodatkowe akcesoria do zabawy</li>
+      <li>✅ Certyfikowane bezpieczeństwo</li>
+    </ul>
+  </section>
+
+  <!-- Dlaczego my -->
+  <section class="dlaczego">
+    <h2>Dlaczego warto wybrać p4kidsparty?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Bezpieczeństwo</h3>
+        <p>Sprzęt z atestami i zawsze pod nadzorem.</p>
+      </div>
+      <div class="feature">
+        <h3>Pełna Obsługa</h3>
+        <p>Dowieziemy, zainstalujemy i odbierzemy wszystko za Ciebie.</p>
+      </div>
+      <div class="feature">
+        <h3>Zadowolenie dzieci</h3>
+        <p>Uśmiech i radość najmłodszych gwarantowana!</p>
+      </div>
     </div>
-    <div class="offer-item" data-aos="fade-up" data-aos-delay="300">
-      <img src="zamek3.jpg" alt="Zamek Dżungla" />
-      <h3>Zamek Dżungla</h3>
-      <p>Pełen kolorów i niespodzianek – super na każdą okazję.</p>
+  </section>
+
+  <!-- Blog -->
+  <section class="blog" id="blog">
+    <h2>Blog – Inspiracje i Relacje</h2>
+    <div class="blog-posts">
+      <article class="post">
+        <h3>Urodziny Jasia – zamek i wata cukrowa!</h3>
+        <p>Relacja z kolorowej imprezy pod Warszawą – dzieci były zachwycone!</p>
+        <a href="#">Czytaj więcej</a>
+      </article>
+      <article class="post">
+        <h3>Piknik firmowy z atrakcjami</h3>
+        <p>Jak dmuchańce odmieniły integrację firmową – idealne dla całych rodzin.</p>
+        <a href="#">Czytaj więcej</a>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
 
-<section>
-  <h2 data-aos="fade-right">Dlaczego my?</h2>
-  <div class="features">
-    <div class="feature" data-aos="flip-left">✅ Bezpieczne dmuchańce</div>
-    <div class="feature" data-aos="flip-left" data-aos-delay="100">🚚 Dowóz na miejsce</div>
-    <div class="feature" data-aos="flip-left" data-aos-delay="200">🧼 Regularna dezynfekcja</div>
-    <div class="feature" data-aos="flip-left" data-aos-delay="300">🎉 Gwarantowana zabawa</div>
-  </div>
-</section>
+  <!-- Kontakt -->
+  <section class="kontakt" id="kontakt">
+    <h2>Skontaktuj się z nami</h2>
+    <p>📞 Tel: <a href="tel:+48663918132">663 918 132</a></p>
+    <p>📧 Email: <a href="mailto:eduzakup@gmail.com">eduzakup@gmail.com</a></p>
 
-<section>
-  <h2 data-aos="fade-left">Kontakt</h2>
-  <form class="contact-form" data-aos="fade-up">
-    <input type="text" placeholder="Imię i nazwisko" required />
-    <input type="email" placeholder="Adres e-mail" required />
-    <textarea rows="4" placeholder="Wiadomość" required></textarea>
-    <button type="submit" class="hero-button">Wyślij wiadomość</button>
-  </form>
-</section>
+    <form action="mailto:eduzakup@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Twoje imię" required>
+      <input type="email" name="email" placeholder="Twój email" required>
+      <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </section>
 
-<section>
-  <h2 data-aos="zoom-in">Nasza lokalizacja</h2>
-  <div class="map-container" data-aos="fade-up">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.2098012431845!2d21.01222851580064!3d52.229675779759554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669d145555%3A0x5f0e2e805d0ad9d4!2sWarszawa!5e0!3m2!1spl!2spl!4v1610000000000!5m2!1spl!2spl"
-      allowfullscreen="" loading="lazy">
-    </iframe>
-  </div>
-</section>
-
-<footer>
-  © 2025 P4Kids Party – dmuchane atrakcje dla dzieci
-</footer>
-
+  <!-- Stopka -->
+  <footer>
+    <p>&copy; 2025 p4kidsparty.pl | Wszelkie prawa zastrzeżone</p>
+  </footer>
+  
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
