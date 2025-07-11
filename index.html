@@ -2,99 +2,87 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Twoja Firma SaaS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"/>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { line-height: 1.6; }
-    header, footer { padding: 1rem 2rem; background: #f8f9fa; }
-    nav { display: flex; justify-content: space-between; align-items: center; }
-    .nav-links a { margin: 0 1rem; text-decoration: none; color: #333; }
-    .btn-primary { background: #4f46e5; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 6px; cursor: pointer; }
-    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4rem 2rem; background: #eef2ff; }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; }
-    .features, .testimonials, .pricing { padding: 3rem 2rem; text-align: center; }
-    .feature-list, .pricing-plans { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 2rem; }
-    .feature, .plan { flex: 1 1 250px; background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.05); }
-    .cta-banner { background: #4f46e5; color: white; padding: 3rem 2rem; text-align: center; }
-    .cta-banner h2 { margin-bottom: 1rem; }
-    @media(max-width: 768px) {
-      .nav-links { display: none; }
-      .feature-list, .pricing-plans { flex-direction: column; }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>p4kidsparty - Dmuchane Zamki</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <nav>
-      <div><strong>TwojaSaaS</strong></div>
-      <div class="nav-links">
-        <a href="#">Funkcje</a>
-        <a href="#">Cennik</a>
-        <a href="#">Opinie</a>
-        <a href="#">Kontakt</a>
-      </div>
-      <button class="btn-primary">Rozpocznij za darmo</button>
-    </nav>
+  <!-- Nawigacja -->
+  <header class="topbar">
+    <div class="container">
+      <h1>p4kidsparty</h1>
+      <nav>
+        <ul>
+          <li><a href="#oferta">Oferta</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <h1>Zautomatyzuj swoją pracę z TwojaSaaS</h1>
-    <p>Kompleksowe narzędzie do zarządzania zespołem i zadaniami — szybciej, łatwiej, skuteczniej.</p>
-    <button class="btn-primary">Rozpocznij darmowy okres próbny</button>
-  </section>
-
-  <!-- Features -->
-  <section class="features">
-    <h2>Najważniejsze funkcje</h2>
-    <div class="feature-list">
-      <div class="feature">✅ Współpraca w czasie rzeczywistym</div>
-      <div class="feature">✅ Integracje z popularnymi aplikacjami</div>
-      <div class="feature">✅ Praca w chmurze</div>
-      <div class="feature">✅ Pełne bezpieczeństwo danych</div>
+  <section class="hero" style="background-image: url('images/hero.jpg')">
+    <div class="overlay">
+      <h2>Najlepsze dmuchane zamki dla Twojej imprezy!</h2>
+      <a href="#kontakt" class="cta">Zarezerwuj teraz</a>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <h2>Zaufali nam:</h2>
-    <p>„Dzięki TwojaSaaS oszczędzamy 15h tygodniowo!” – Anna, Project Manager</p>
-  </section>
-
-  <!-- Pricing -->
-  <section class="pricing">
-    <h2>Wybierz swój plan</h2>
-    <div class="pricing-plans">
-      <div class="plan">
-        <h3>Start</h3>
-        <p>0 zł / mies.</p>
-        <p>Podstawowe funkcje</p>
-        <button class="btn-primary">Załóż konto</button>
+  <!-- Oferta -->
+  <section id="oferta" class="section">
+    <h2>Nasze usługi</h2>
+    <div class="services">
+      <div class="card">
+        <img src="images/zamek1.jpg" alt="Zamek 1" />
+        <h3>Wynajem dmuchanych zamków</h3>
+        <p>Kolorowe atrakcje z dostawą i montażem!</p>
       </div>
-      <div class="plan">
-        <h3>Pro</h3>
-        <p>49 zł / mies.</p>
-        <p>Wszystkie funkcje + wsparcie</p>
-        <button class="btn-primary">Rozpocznij</button>
+      <div class="card">
+        <img src="images/zamek2.jpg" alt="Zamek 2" />
+        <h3>Przyjęcia tematyczne</h3>
+        <p>Balony, animacje, konkursy – zabawa gwarantowana.</p>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="cta-banner">
-    <h2>Gotowy na zwiększenie produktywności?</h2>
-    <p>Rozpocznij darmowy okres próbny — bez karty kredytowej.</p>
-    <button class="btn-primary">Zarejestruj się</button>
+  <!-- FAQ -->
+  <section id="faq" class="section">
+    <h2>Często zadawane pytania</h2>
+    <div class="accordion">
+      <details open>
+        <summary>Jakie są godziny działania?</summary>
+        <p>Działamy codziennie od 9:00 do 18:00.</p>
+      </details>
+      <details>
+        <summary>Czy dostosowujecie ofertę indywidualnie?</summary>
+        <p>Oczywiście! Skontaktuj się z nami i opowiedz o swoich potrzebach.</p>
+      </details>
+      <details>
+        <summary>Jak mogę zarezerwować?</summary>
+        <p>Skorzystaj z formularza kontaktowego lub zadzwoń.</p>
+      </details>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Kontakt -->
+  <section id="kontakt" class="section">
+    <h2>Kontakt</h2>
+    <p><strong>Telefon:</strong> <a href="tel:+48663918132">663 918 132</a></p>
+    <p><strong>Email:</strong> <a href="mailto:eduzakup@gmail.com">eduzakup@gmail.com</a></p>
+
+    <form>
+      <input type="text" placeholder="Twoje imię" required />
+      <input type="email" placeholder="Twój email" required />
+      <textarea rows="5" placeholder="Wiadomość" required></textarea>
+      <button type="submit">Wyślij wiadomość</button>
+    </form>
+  </section>
+
+  <!-- Stopka -->
   <footer>
-    <p>&copy; 2025 TwojaSaaS. Wszelkie prawa zastrzeżone.</p>
+    <p>&copy; 2025 p4kidsparty | Projekt inspirowany Webador</p>
   </footer>
 
 </body>
